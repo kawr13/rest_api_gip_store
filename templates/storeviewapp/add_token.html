@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+  <h2>{{ title }}</h2>
+  <form method="post" action="{% url 'storeviewapp:add_token' %}">
+    {% csrf_token %}
+    <button type="submit">Create Token</button>
+  </form>
+<br>
+<div>
+    <p><b>Token:</b> {{ token }}</p>
+</div>
+</body>
+</html>
+<!-- add_token.html -->
